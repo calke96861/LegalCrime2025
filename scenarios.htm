@@ -1,0 +1,593 @@
+<HTML>
+<HEAD>
+  <META NAME="GENERATOR" CONTENT="Adobe PageMill 2.0 Mac">
+  <TITLE>Creating scenarios for Legal Crime</TITLE>
+</HEAD>
+<BODY BGCOLOR="#000000" LINK="#f9ff40" VLINK="#bfbf03" TEXT="#11d911" ALINK=
+"#faffba">
+
+<P><CENTER><IMG SRC="Pics/legal.gif" WIDTH="472" HEIGHT="128" ALIGN="BOTTOM"
+NATURALSIZEFLAG="3"></CENTER></P>
+
+<P><CENTER><B><FONT SIZE=+3>Creating scenarios for Legal Crime</FONT></B></CENTER></P>
+
+<P>&nbsp;</P>
+
+<H3>General</H3>
+
+<BLOCKQUOTE>
+  <P>The scenario files contain the rules that govern the scenario &shy;
+  who wins when certain conditions are met, what units are placed on the
+  map on the beginning, what other properties they players and the units
+  have eta.</P>
+  <P>When you create a scenario file, name it anything you wish, and use
+  the suffix <B>.SCE</B>. Place the file in the Scenarios directory, which
+  is located in the same directory with the game itself.</P>
+  <P><B>NOTE! You can play custom-made scenarios only with a licensed version
+  of Legal Crime. Demo version allows only to play the scenarios already
+  in the game!</B></P>
+</BLOCKQUOTE>
+
+<H3>Format</H3>
+
+<BLOCKQUOTE>
+  <P>The format for the scenario files is:</P>
+  <P><A HREF="#epiver"><B>EPI_VER10</B></A><BR>
+  <B><A HREF="#funds">FUNDS &lt;amount&gt;</A></B><BR>
+  <B><A HREF="#map">MAP &lt;name&gt;</A></B><BR>
+  <B><A HREF="#random">RANDOM &lt;state&gt;</A></B></P>
+  <P><A HREF="#player"><B>PLAYER &lt;NR&gt; &lt;type&gt; &lt;hq&gt; &lt;name&gt;</B></A></P>
+  <P><A HREF="#vcond"><B>VCOND &lt;NR&gt; ....</B></A></P>
+  <P><A HREF="#unit"><B>UNIT &lt;type&gt; &lt;OWNER_NR&gt; &lt;X&gt; &lt;Y&gt;
+  &lt;NOSALARY&gt; &lt;STATIONARY&gt; [&lt;NAME&gt;]</B></A></P>
+  <P><A HREF="#alliance"><B>ALLIANCE &lt;PLAYER_ID1&gt; &lt;PLAYER_ID2&gt;</B></A></P>
+  <P><A HREF="#bribeadvance"><B>BRIBEADVANCE &lt;PLAYER_ID&gt; &lt;TYPE&gt;
+  &lt;IOULEVEL&gt; &lt;CUMULATIVELEVEL&gt;<BR>
+  </B></A><BR>
+  <B><A HREF="#scenario">SCENARIONAME { &lt;the text&gt; }<BR>
+  </A><A HREF="#story">STORYTEXT { &lt;the text&gt; }<BR>
+  </A><A HREF="#success">SUCCESSTEXT { &lt;the text&gt; }<BR>
+  </A><A HREF="#failure">FAILURETEXT { &lt;the text&gt; }<BR>
+  </A><A HREF="#objective">OBJECTIVETEXT { &lt;the text&gt; }<BR>
+  </A><A HREF="#tip">TIPTEXT { &lt;the text &gt; }</A></B></P>
+  <P>&nbsp;</P>
+  <P><CENTER><TABLE WIDTH="450" BORDER="0" CELLSPACING="0" CELLPADDING="5"
+  HEIGHT="24">
+<TR>
+<TD WIDTH="18%" HEIGHT="17" BGCOLOR="#013f03" VALIGN="TOP">  <P><CENTER>Example</CENTER></TD>
+<TD WIDTH="82%" BGCOLOR="#002601">  <P>EPI_VER10<BR>
+  FUNDS 1000000<BR>
+  MAP ThreeBlocks.map<BR>
+  RANDOM 0</P>
+
+  
+  <P>PLAYER 1 0 0 User<BR>
+  PLAYER 2 6 1 Rodolfo<BR>
+  PLAYER 3 6 1 Cassandra<BR>
+  PLAYER 4 6 1 Pallone</P>
+
+  
+  <P>VCOND 3 1 12</P>
+
+  
+  <P>UNIT 12 2 19 50 0 1 Don Rodolfo<BR>
+  UNIT 12 3 92 86 0 1 Don Cassandra<BR>
+  UNIT 12 4 91 14 0 1 Don Pallone<BR>
+  UNIT 5 1 44 49 0 0 <BR>
+  UNIT 2 2 7 55 0 0 <BR>
+  UNIT 2 3 80 91 0 0 <BR>
+  UNIT 2 4 80 19 0 0 <BR>
+  UNIT 4 2 37 23 0 1 <BR>
+  UNIT 4 2 37 74 0 1 <BR>
+  UNIT 4 2 3 24 0 1 <BR>
+  UNIT 4 2 3 75 0 1 <BR>
+  UNIT 4 3 52 68 0 1 <BR>
+  UNIT 4 3 52 96 0 1 <BR>
+  UNIT 4 3 93 68 0 1 <BR>
+  UNIT 4 4 51 5 0 1 <BR>
+  UNIT 4 4 51 31 0 1 <BR>
+  UNIT 4 4 99 29 0 1 <BR>
+  UNIT 1 2 20 47 0 0 <BR>
+  UNIT 1 2 20 50 0 0 <BR>
+  UNIT 1 3 92 84 0 0 <BR>
+  UNIT 1 3 92 87 0 0 <BR>
+  UNIT 1 4 92 11 0 0 <BR>
+  UNIT 1 4 92 14 0 0<BR>
+  UNIT 3 2 27 43 0 0 <BR>
+  UNIT 3 3 94 79 0 0 <BR>
+  UNIT 3 4 94 19 0 0</P>
+
+  
+  <P>SCENARIONAME {Drive-by shooting}</P>
+
+  
+  <P>STORYTEXT {Cassandra, whose empire is as strong or even stronger than
+  yours, was behind your assassination attempt, along with his allies, Don
+  Pallone and Don Rodolfo.</P>
+
+  
+  <P>You're hungry for revenge and decide to assassinate all these three
+  enemies. You are far from your own HQ and have no other tools than a Cadillac
+  with 4 Thompson men inside...}</P>
+
+  
+  <P>TIPTEXT {There are three Dons, be sure to kill them all. But you have
+  no real reason to kill all the other gangsters, except maybe for your pleasure.
+  Note that you can unload the Cadillac if it goes in too bad a shape (but
+  the unloading must take place before the car breaks down).</P>
+
+  
+  <P>The Cadillac is fast, use this feature to your advantage. And remember
+  that the terrorist can destroy the car with ine bomb! Stay away from them!</P>
+
+  
+  <P>Have fun!}</P>
+
+  
+  <P>OBJECTIVETEXT {Murder Cassandra, Pallone and Rodolfo}</P>
+
+  
+  <P>SUCCESSTEXT {Success!</P>
+
+  
+  <P>Wasn't it fun to do some drive-by-shooting? You sent the poor fellows
+  to a one-way ride, good job!}</P>
+
+  
+  <P>FAILURETEXT {Your revenge failed. Too bad.</P>
+
+  
+  <P>Revenge is sweet, but don't get carried away... Remember, try not to
+  stop, especially not near terrorists.}</TD></TR>
+</TABLE>
+</CENTER></P>
+  <P><CENTER><IMG SRC="Pics/documentation/viiva.gif" WIDTH="400" HEIGHT=
+  "2" ALIGN="BOTTOM" NATURALSIZEFLAG="3"></CENTER></P>
+  <P>A more detailed description of each command follows:</P>
+  <P><A NAME="epiver"></A><B>EPI_VER&lt;VERSION&gt;</B></P>
+  <BLOCKQUOTE>
+    <P>The version number of the episode.</P>
+    <P><B>&lt;VERSION&gt;</B> The version number.</P>
+    <P><TABLE WIDTH="450" BORDER="0" CELLSPACING="0" CELLPADDING="5" HEIGHT=
+    "28">
+<TR>
+<TD WIDTH="18%" HEIGHT="27" BGCOLOR="#013f03">    <P><CENTER>Example</CENTER></TD>
+<TD WIDTH="82%" BGCOLOR="#002601">    &nbsp;EPI_VER10</TD></TR>
+</TABLE>
+</P>
+  </BLOCKQUOTE>
+  <P><CENTER><IMG SRC="Pics/documentation/viiva.gif" WIDTH="400" HEIGHT=
+  "2" ALIGN="BOTTOM" NATURALSIZEFLAG="3"></CENTER></P>
+  <P><A NAME="funds"></A><B>FUNDS &lt;AMOUNT&gt;</B></P>
+  <BLOCKQUOTE>
+    <P>Starting funds for each player. The funds can not yet be set individually
+    - the amount is the same for each player.</P>
+    <P><TABLE WIDTH="450" BORDER="0" CELLSPACING="0" CELLPADDING="5" HEIGHT=
+    "24">
+<TR>
+<TD WIDTH="18%" HEIGHT="17" BGCOLOR="#013f03">    <P><CENTER>Example</CENTER></TD>
+<TD WIDTH="82%" BGCOLOR="#002601">    &nbsp;FUNDS 200000</TD></TR>
+</TABLE>
+</P>
+  </BLOCKQUOTE>
+  <P><CENTER><IMG SRC="Pics/documentation/viiva.gif" WIDTH="400" HEIGHT=
+  "2" ALIGN="BOTTOM" NATURALSIZEFLAG="3"></CENTER></P>
+  <P><A NAME="map"></A><B>MAP &lt;name&gt;</B></P>
+  <BLOCKQUOTE>
+    <P>The map to be played on. The map file must be present in the Maps directory.</P>
+    <P><TABLE WIDTH="450" BORDER="0" CELLSPACING="0" CELLPADDING="5" HEIGHT=
+    "24">
+<TR>
+<TD WIDTH="18%" HEIGHT="17" BGCOLOR="#013f03">    <P><CENTER>Example</CENTER></TD>
+<TD WIDTH="82%" BGCOLOR="#002601">    MAP Rivers.map</TD></TR>
+</TABLE>
+</P>
+  </BLOCKQUOTE>
+  <P><CENTER><IMG SRC="Pics/documentation/viiva.gif" WIDTH="400" HEIGHT=
+  "2" ALIGN="BOTTOM" NATURALSIZEFLAG="3"></CENTER></P>
+  <P><A NAME="random"></A><B>RANDOM &lt;STATE&gt;</B></P>
+  <BLOCKQUOTE>
+    <P>Determines wheter starting points for this map are random or pre-defined
+    (later in this file).<BR>
+    1 = random starting points<BR>
+    0 = pre-defined starting points</P>
+    <P><TABLE WIDTH="450" BORDER="0" CELLSPACING="0" CELLPADDING="5" HEIGHT=
+    "24">
+<TR>
+<TD WIDTH="18%" HEIGHT="17" BGCOLOR="#013f03">    <P><CENTER>Example</CENTER></TD>
+<TD WIDTH="82%" BGCOLOR="#002601">    RANDOM 1</TD></TR>
+</TABLE>
+</P>
+  </BLOCKQUOTE>
+  <P><CENTER><IMG SRC="Pics/documentation/viiva.gif" WIDTH="400" HEIGHT=
+  "2" ALIGN="BOTTOM" NATURALSIZEFLAG="3"></CENTER></P>
+  <P><A NAME="player"></A><B>PLAYER &lt;NR&gt; &lt;TYPE&gt; &lt;HQ&gt; &lt;NAME&gt;</B></P>
+  <BLOCKQUOTE>
+    <P>Places players on the map. The players are placed to the headquaters
+    <I>in the same order the HQs appear in the map file. </I>So the first player
+    gets the first HQ, the second the second etc. <I>Unless random starting
+    points are enables, see <B>RANDOM</B></I>.</P>
+    <P><B>&lt;NR&gt;</B> Player ID. Must be unique for each player.</P>
+    <P><B>&lt;TYPE&gt;</B> Player type:</P>
+    <BLOCKQUOTE>
+      <P>0 = Human (only one/scenario for now)<BR>
+      1 = computer player (skill level 0)<BR>
+      2 = computer player (skill level 1)<BR>
+      3 = computer player (skill level 2)<BR>
+      4 = computer player (skill level 3, normal)<BR>
+      5= computer player (for starting wirh funds=0)<BR>
+      6= computer player (Rusher)</P>
+    </BLOCKQUOTE>
+    <P><B>&lt;HQ&gt;</B> Determines whether the player has a HQ or not.</P>
+    <BLOCKQUOTE>
+      <P>0 = no HQ<BR>
+      1 = has a HQ</P>
+    </BLOCKQUOTE>
+    <P><B>&lt;NAME&gt;</B> Player name. Random if not supplied.</P>
+    <P><TABLE WIDTH="450" BORDER="0" CELLSPACING="0" CELLPADDING="5" HEIGHT=
+    "24">
+<TR>
+<TD WIDTH="18%" HEIGHT="17" BGCOLOR="#013f03">    <P><CENTER>Example</CENTER></TD>
+<TD WIDTH="82%" BGCOLOR="#002601">    PLAYER 1 0 0 User<BR>
+    PLAYER 2 6 1 Compuzetti</TD></TR>
+</TABLE>
+</P>
+  </BLOCKQUOTE>
+  <P><CENTER><IMG SRC="Pics/documentation/viiva.gif" WIDTH="400" HEIGHT=
+  "2" ALIGN="BOTTOM" NATURALSIZEFLAG="3"></CENTER></P>
+  <P><A NAME="vcond"></A><B>VCOND &lt;NR&gt; ....</B></P>
+  <BLOCKQUOTE>
+    <P>Determines the conditions under which the game ends. Note that regardless
+    of these rules, if all players except one are dead, the one left wins the
+    game. If there are more than one VCONDs, a player will win if <I>any</I>
+    of the conditions are met.</P>
+    <P><CENTER><IMG SRC="Pics/documentation/viiva.gif" WIDTH="400" HEIGHT=
+    "2" ALIGN="BOTTOM" NATURALSIZEFLAG="3"></CENTER></P>
+    <P><A NAME="vcond1"></A><B>VCOND 1 &lt;PLAYER_ID&gt; &lt;AMOUNT&gt;</B></P>
+    <BLOCKQUOTE>
+      <P>Player wins when PLAYER_ID's income is at least AMOUNT.</P>
+      <P><B>&lt;PLAYER_ID&gt;</B> Player's unique ID number.<BR>
+      <B>&lt;AMOUNT&gt;</B> Desired income</P>
+      <P><TABLE WIDTH="450" BORDER="0" CELLSPACING="0" CELLPADDING="5" HEIGHT=
+      "24">
+<TR>
+<TD WIDTH="18%" HEIGHT="17" BGCOLOR="#013f03">      <P><CENTER>Example</CENTER></TD>
+<TD WIDTH="82%" BGCOLOR="#002601">      VCOND 1 1 500000</TD></TR>
+</TABLE>
+</P>
+    </BLOCKQUOTE>
+    <P><CENTER><IMG SRC="Pics/documentation/viiva.gif" WIDTH="400" HEIGHT=
+    "2" ALIGN="BOTTOM" NATURALSIZEFLAG="3"></CENTER></P>
+    <P><A NAME="vcond2"></A><B>VCOND 2 &lt;PLAYER_ID&gt; &lt;NR&gt; &lt;BUSINESS_AREA&gt;</B></P>
+    <BLOCKQUOTE>
+      <P>Player wins when nr of own businesses in BUSINESS_AREA &gt;= NR. See
+      <A HREF="#businesses">list of businesses</A>.</P>
+      <P><B>&lt;PLAYER_ID&gt;</B> Player's unique ID number.<BR>
+      <B>&lt;NR&gt;</B> Desired number of businesses<BR>
+      &lt;<B>BUSINESS_AREA</B>&gt; The branch of business. See <A HREF="#businesses">list
+      of businesses</A>.</P>
+      <P><TABLE WIDTH="450" BORDER="0" CELLSPACING="0" CELLPADDING="5" HEIGHT=
+      "24">
+<TR>
+<TD WIDTH="18%" HEIGHT="17" BGCOLOR="#013f03">      <P><CENTER>Example</CENTER></TD>
+<TD WIDTH="82%" BGCOLOR="#002601">      VCOND 2 1 5 1</TD></TR>
+</TABLE>
+</P>
+    </BLOCKQUOTE>
+    <P><CENTER><IMG SRC="Pics/documentation/viiva.gif" WIDTH="400" HEIGHT=
+    "2" ALIGN="BOTTOM" NATURALSIZEFLAG="3"></CENTER></P>
+    <P><A NAME="vcond3"></A><B>VCOND 3 &lt;PLAYER_ID&gt; &lt;UNR&gt;</B></P>
+    <BLOCKQUOTE>
+      <P>Player wins when the given player doesn't have the given unit type.
+      See <A HREF="#units">list of units</A>.</P>
+      <P><B>&lt;PLAYER_ID&gt;</B> Player's unique ID number.<BR>
+      <B>&lt;UNR&gt;</B> Unit number. See <A HREF="#units">list of units</A>.</P>
+      <P><TABLE WIDTH="450" BORDER="0" CELLSPACING="0" CELLPADDING="5" HEIGHT=
+      "24">
+<TR>
+<TD WIDTH="18%" HEIGHT="17" BGCOLOR="#013f03">      <P><CENTER>Example</CENTER></TD>
+<TD WIDTH="82%" BGCOLOR="#002601">      VCOND 3 1 2</TD></TR>
+</TABLE>
+</P>
+    </BLOCKQUOTE>
+    <P><CENTER><IMG SRC="Pics/documentation/viiva.gif" WIDTH="400" HEIGHT=
+    "2" ALIGN="BOTTOM" NATURALSIZEFLAG="3"></CENTER></P>
+    <P><A NAME="vcond4"></A><B>VCOND 4 &lt;PLAYER_ID&gt; &lt;UNR&gt;</B></P>
+    <BLOCKQUOTE>
+      <P>Player wins when the given player has the given unit type. See <A HREF=
+      "#units">list of units</A>.</P>
+      <P><B>&lt;PLAYER_ID&gt;</B> Player's unique ID number.<BR>
+      <B>&lt;UNR&gt;</B> Unit number. See <A HREF="#units">list of units</A>.</P>
+      <P><TABLE WIDTH="450" BORDER="0" CELLSPACING="0" CELLPADDING="5" HEIGHT=
+      "24">
+<TR>
+<TD WIDTH="18%" HEIGHT="17" BGCOLOR="#013f03">      <P><CENTER>Example</CENTER></TD>
+<TD WIDTH="82%" BGCOLOR="#002601">      VCOND 4 1 5</TD></TR>
+</TABLE>
+</P>
+    </BLOCKQUOTE>
+    <P><CENTER><IMG SRC="Pics/documentation/viiva.gif" WIDTH="400" HEIGHT=
+    "2" ALIGN="BOTTOM" NATURALSIZEFLAG="3"></CENTER></P>
+    <P><A NAME="vcond5"></A><B>VCOND 5 &lt;PLAYER_ID&gt; &lt;MS&gt; &lt;BUSINESS_AREA&gt;</B></P>
+    <BLOCKQUOTE>
+      <P>Player wins when player'smarket share in BUSINESS_AREA &gt;= MS. MS
+      is floating point value between 0...1 representing market share. See a
+      <A HREF="#businesses">list of business areas</A>.</P>
+      <P><B>&lt;PLAYER_ID&gt;</B> Player's unique ID number.<BR>
+      <B>&lt;MS&gt;</B> Desired market share<BR>
+      &lt;<B>BUSINESS_AREA</B>&gt; The branch of business. See <A HREF="#businesses">list
+      of business areas</A>.</P>
+      <P><TABLE WIDTH="450" BORDER="0" CELLSPACING="0" CELLPADDING="5" HEIGHT=
+      "24">
+<TR>
+<TD WIDTH="18%" HEIGHT="17" BGCOLOR="#013f03">      <P><CENTER>Example</CENTER></TD>
+<TD WIDTH="82%" BGCOLOR="#002601">      VCOND 5 0.10 2</TD></TR>
+</TABLE>
+</P>
+    </BLOCKQUOTE>
+    <P><CENTER><IMG SRC="Pics/documentation/viiva.gif" WIDTH="400" HEIGHT=
+    "2" ALIGN="BOTTOM" NATURALSIZEFLAG="3"></CENTER></P>
+    <P><A NAME="vcond6"></A><B>VCOND 6 &lt;PLAYER_ID&gt; &lt;AREA_LEVEL&gt;</B></P>
+    <BLOCKQUOTE>
+      <P>Player wins when player is able to place business in the given level
+      area.</P>
+      <P><B>&lt;PLAYER_ID&gt;</B> Player's unique ID number.<BR>
+      <B>&lt;AREA_LEVEL&gt;</B> The area where businesses must be founded.</P>
+      <BLOCKQUOTE>
+        <P>0 = Slum<BR>
+        1 = Middle class<BR>
+        2 = Center<BR>
+        3 = Any</P>
+      </BLOCKQUOTE>
+      <P><TABLE WIDTH="450" BORDER="0" CELLSPACING="0" CELLPADDING="5" HEIGHT=
+      "24">
+<TR>
+<TD WIDTH="18%" HEIGHT="17" BGCOLOR="#013f03">      <P><CENTER>Example</CENTER></TD>
+<TD WIDTH="82%" BGCOLOR="#002601">      VCOND 6 1 2</TD></TR>
+</TABLE>
+</P>
+    </BLOCKQUOTE>
+    <P><CENTER><IMG SRC="Pics/documentation/viiva.gif" WIDTH="400" HEIGHT=
+    "2" ALIGN="BOTTOM" NATURALSIZEFLAG="3"></CENTER></P>
+    <P><A NAME="vcond7"></A><B>VCOND 7 &lt;PLAYER_ID&gt; &lt;X&gt; &lt;Y&gt;
+    &lt;MAXDIST&gt; &lt;UNR&gt;</B></P>
+    <BLOCKQUOTE>
+      <P>Player wins when player has a gangster of type UNR nearer than MAXDIST
+      from (X, Y). See list of units.</P>
+      <P><B>&lt;PLAYER_ID&gt;</B> Player's unique ID number.<BR>
+      <B>&lt;X&gt;</B> X-cordinate<BR>
+      <B>&lt;Y&gt;</B> Y-cordinate<BR>
+      <B>&lt;MAXDIST&gt;</B> Maximum distance from target.<BR>
+      <B>&lt;UNR&gt;</B> Unit number. See <A HREF="#units">list of units</A>.</P>
+      <P><TABLE WIDTH="450" BORDER="0" CELLSPACING="0" CELLPADDING="5" HEIGHT=
+      "24">
+<TR>
+<TD WIDTH="18%" HEIGHT="17" BGCOLOR="#013f03">      <P><CENTER>Example</CENTER></TD>
+<TD WIDTH="82%" BGCOLOR="#002601">      VCOND 7 1 29 33 5 12</TD></TR>
+</TABLE>
+</P>
+    </BLOCKQUOTE>
+    <P><CENTER><IMG SRC="Pics/documentation/viiva.gif" WIDTH="400" HEIGHT=
+    "2" ALIGN="BOTTOM" NATURALSIZEFLAG="3"></CENTER></P>
+    <P><A NAME="vcond8"></A><B>VCOND 8 &lt;PLAYER_ID&gt; &lt;ULC_X&gt; &lt;ULC_Y&gt;
+    &lt;LRC_X&gt; &lt;LRC_Y&gt; &lt;BUSINESS_AREA&gt; &lt;NR&gt;</B></P>
+    <BLOCKQUOTE>
+      <P><B>&lt;PLAYER_ID&gt;</B> Player's unique ID number.<BR>
+      <B>&lt;ULC_X&gt;</B> Upper left-hand corner of the rectangle<B><BR>
+      &lt;ULC_Y&gt;</B> Upper right-hand corner of the rectangle<B><BR>
+      &lt;LRC_X&gt;</B> Lower left-hand corner of the rectangle<B><BR>
+      &lt;LRC_Y&gt;</B> Lower right-hand corner of the rectangle<B><BR>
+      &lt;BUSINESS_AREA&gt;</B> Branch of business. See <A HREF="#businesses">list
+      of business areas</A>.<B><BR>
+      &lt;NR&gt;</B> Number of businesses</P>
+      <P>Wins when player has NR BUSINESS_AREA type businesses within rectangle
+      (ULC_X, ULC_Y), (LRC_X, LRC_Y). ULC = upper left hand corner, LRC = lower
+      right hand corner. See <A HREF="#businesses">list of business areas</A>.</P>
+      <P><TABLE WIDTH="450" BORDER="0" CELLSPACING="0" CELLPADDING="5" HEIGHT=
+      "24">
+<TR>
+<TD WIDTH="18%" HEIGHT="17" BGCOLOR="#013f03">      <P><CENTER>Example</CENTER></TD>
+<TD WIDTH="82%" BGCOLOR="#002601">      VCOND 8 1 10 15 25 40 2 5</TD></TR>
+</TABLE>
+</P>
+    </BLOCKQUOTE>
+    <P><CENTER><IMG SRC="Pics/documentation/viiva.gif" WIDTH="400" HEIGHT=
+    "2" ALIGN="BOTTOM" NATURALSIZEFLAG="3"></CENTER></P>
+    <P><A NAME="vcond9"></A><B>VCOND 9 &lt;PLAYED_ID&gt; &lt;UNR&gt; &lt;NR&gt;</B></P>
+    <BLOCKQUOTE>
+      <P>Player wins when the nr of units with given type is below NR. See list
+      of units.</P>
+      <P><B>&lt;PLAYER_ID&gt;</B> Player's unique ID number.<BR>
+      <B>&lt;UNR&gt;</B> Unit number. See <A HREF="#units">list of units</A>.<BR>
+      <B>&lt;NR&gt;</B> Required number of units.</P>
+      <P><TABLE WIDTH="450" BORDER="0" CELLSPACING="0" CELLPADDING="5" HEIGHT=
+      "24">
+<TR>
+<TD WIDTH="18%" HEIGHT="17" BGCOLOR="#013f03">      <P><CENTER>Example</CENTER></TD>
+<TD WIDTH="82%" BGCOLOR="#002601">      VCOND 9 2 2 5</TD></TR>
+</TABLE>
+</P>
+    </BLOCKQUOTE>
+  </BLOCKQUOTE>
+  <P><CENTER><IMG SRC="Pics/documentation/viiva.gif" WIDTH="400" HEIGHT=
+  "2" ALIGN="BOTTOM" NATURALSIZEFLAG="3"></CENTER></P>
+  <P><A NAME="unit"></A><B>UNIT &lt;UNR&gt; &lt;OWNER_NR&gt; &lt;X-COORD&gt;
+  &lt;Y-COORD&gt; &lt;HASSALARY&gt; &lt;STATIONARY&gt; [&lt;NAME&gt;]</B></P>
+  <BLOCKQUOTE>
+    <P>Places a unit on the map.</P>
+    <P><B>&lt;UNR&gt;</B> Unit number. See <A HREF="#units">list of units</A>.<BR>
+    <B>&lt;OWNER_NR&gt; </B>the ID of the unit owner. 0=neutral<BR>
+    <B>&lt;X-COORD&gt; </B>X-cordinate of the unit<BR>
+    <B>&lt;Y-COORD&gt; </B>Y-cordinat of the unit<BR>
+    <B>&lt;HASSALARY&gt; </B>0 = no salary, 1 = normal salary<BR>
+    <B>&lt;STATIONARY&gt; </B>0 = normal unit, 1 = computer player does not
+    move this unit (does not affect human player's units)<BR>
+    <B>&lt;NAME&gt;</B> Unit name, optional. Random if not supplied.</P>
+    <P><TABLE WIDTH="450" BORDER="0" CELLSPACING="0" CELLPADDING="5" HEIGHT=
+    "24">
+<TR>
+<TD WIDTH="18%" HEIGHT="17" BGCOLOR="#013f03">    <P><CENTER>Example</CENTER></TD>
+<TD WIDTH="82%" BGCOLOR="#002601">    UNIT 12 1 15 15 1 1 Don Carlos</TD></TR>
+</TABLE>
+</P>
+    <P><CENTER><IMG SRC="Pics/documentation/viiva.gif" WIDTH="400" HEIGHT=
+    "2" ALIGN="BOTTOM" NATURALSIZEFLAG="3"></CENTER></P>
+  </BLOCKQUOTE>
+  <P><A NAME="alliance"></A><B>ALLIANCE &lt;PLAYER_ID1&gt; &lt;PLAYER_ID2&gt;</B></P>
+  <BLOCKQUOTE>
+    <P>Creates an alliance between two players. If you need an alliance with
+    more players, use several <B>ALLIANCE</B> commands.</P>
+    <P><B>&lt;PLAYER_ID1&gt;</B> First player's ID number.<BR>
+    <B>&lt;PLAYER_ID2&gt;</B> Second player's ID number.</P>
+    <P><TABLE WIDTH="450" BORDER="0" CELLSPACING="0" CELLPADDING="5" HEIGHT=
+    "24">
+<TR>
+<TD WIDTH="18%" HEIGHT="17" BGCOLOR="#013f03">    <P><CENTER>Example</CENTER></TD>
+<TD WIDTH="82%" BGCOLOR="#002601">    ALLIANCE 1 2</TD></TR>
+</TABLE>
+</P>
+  </BLOCKQUOTE>
+</BLOCKQUOTE>
+
+<P><CENTER><IMG SRC="Pics/documentation/viiva.gif" WIDTH="400" HEIGHT="2"
+ALIGN="BOTTOM" NATURALSIZEFLAG="3"></CENTER></P>
+
+<BLOCKQUOTE>
+  <P><BR>
+  <A NAME="bribeadvance"></A><B>BRIBEADVANCE &lt;PLAYER_ID&gt; &lt;TYPE&gt;
+  &lt;IOULEVEL&gt; &lt;CUMULATIVELEVEL&gt;</B></P>
+  <BLOCKQUOTE>
+    <BLOCKQUOTE>
+      <P>Initialize player's bribeadvance level.</P>
+      <P><B>&lt;PLAYER_ID&gt;</B> Player's unique ID number.<BR>
+      <B>&lt;PLAYER_ID&gt;</B> Player number<BR>
+      <B>&lt;TYPE&gt;</B> type of bribe:</P>
+      <BLOCKQUOTE>
+        <P>1 = ARMY<BR>
+        2 = FBI<BR>
+        3 = GOVT<BR>
+        4 = POLICE</P>
+      </BLOCKQUOTE>
+      <P><B>&lt;IOULEVEL&gt;</B> the requested level of IOU points<BR>
+      <B>&lt;CUMULATIVELEVEL&gt;</B> the cumulative amount of bribes requested.</P>
+    </BLOCKQUOTE>
+    <P><TABLE WIDTH="450" BORDER="0" CELLSPACING="0" CELLPADDING="5" HEIGHT=
+    "24">
+<TR>
+<TD WIDTH="18%" HEIGHT="17" BGCOLOR="#013f03">    <P><CENTER>Example</CENTER></TD>
+<TD WIDTH="82%" BGCOLOR="#002601">    BRIBEADVANCE 1 2 150 15000000</TD></TR>
+</TABLE>
+</P>
+  </BLOCKQUOTE>
+  <P><CENTER><IMG SRC="Pics/documentation/viiva.gif" WIDTH="400" HEIGHT=
+  "2" ALIGN="BOTTOM" NATURALSIZEFLAG="3"></CENTER></P>
+  <P><A NAME="scenario"></A><B>SCENARIONAME { &lt;the text&gt; }</B></P>
+  <BLOCKQUOTE>
+    <P>The name of the scenario. Muista riviv&auml;lit!</P>
+    <P><TABLE WIDTH="450" BORDER="0" CELLSPACING="0" CELLPADDING="5" HEIGHT=
+    "24">
+<TR>
+<TD WIDTH="18%" HEIGHT="17" BGCOLOR="#013f03">    <P><CENTER>Example</CENTER></TD>
+<TD WIDTH="82%" BGCOLOR="#002601">    SCENARIONAME {The Combat}</TD></TR>
+</TABLE>
+</P>
+  </BLOCKQUOTE>
+  <P><CENTER><IMG SRC="Pics/documentation/viiva.gif" WIDTH="400" HEIGHT=
+  "2" ALIGN="BOTTOM" NATURALSIZEFLAG="3"></CENTER></P>
+  <P><A NAME="story"></A><B>STORYTEXT { &lt;the text&gt; }</B></P>
+  <BLOCKQUOTE>
+    <P>Scenario story, visible at the beginning of the scenario.</P>
+    <P><TABLE WIDTH="450" BORDER="0" CELLSPACING="0" CELLPADDING="5" HEIGHT=
+    "24">
+<TR>
+<TD WIDTH="18%" HEIGHT="17" BGCOLOR="#013f03">    <P><CENTER>Example</CENTER></TD>
+<TD WIDTH="82%" BGCOLOR="#002601">    STORYTEXT {Welcome to the Combat!}</TD></TR>
+</TABLE>
+</P>
+  </BLOCKQUOTE>
+  <P><CENTER><IMG SRC="Pics/documentation/viiva.gif" WIDTH="400" HEIGHT=
+  "2" ALIGN="BOTTOM" NATURALSIZEFLAG="3"></CENTER></P>
+  <P><A NAME="success"></A><B>SUCCESSTEXT { &lt;the text&gt; }</B></P>
+  <BLOCKQUOTE>
+    <P>Text displayed after successful completition of the scenario.</P>
+    <P><TABLE WIDTH="450" BORDER="0" CELLSPACING="0" CELLPADDING="5" HEIGHT=
+    "24">
+<TR>
+<TD WIDTH="18%" HEIGHT="17" BGCOLOR="#013f03">    <P><CENTER>Example</CENTER></TD>
+<TD WIDTH="82%" BGCOLOR="#002601">    SUCCESSTEXT {Congratulations!}</TD></TR>
+</TABLE>
+</P>
+  </BLOCKQUOTE>
+  <P><CENTER><IMG SRC="Pics/documentation/viiva.gif" WIDTH="400" HEIGHT=
+  "2" ALIGN="BOTTOM" NATURALSIZEFLAG="3"></CENTER></P>
+  <P><A NAME="failure"></A><B>FAILURETEXT { &lt;the text&gt; }</B></P>
+  <BLOCKQUOTE>
+    <P>Text displayed after failure in the scenario.</P>
+    <P><TABLE WIDTH="450" BORDER="0" CELLSPACING="0" CELLPADDING="5" HEIGHT=
+    "24">
+<TR>
+<TD WIDTH="18%" HEIGHT="17" BGCOLOR="#013f03">    <P><CENTER>Example</CENTER></TD>
+<TD WIDTH="82%" BGCOLOR="#002601">    FAILURETEXT {Failure!}</TD></TR>
+</TABLE>
+</P>
+  </BLOCKQUOTE>
+  <P><CENTER><IMG SRC="Pics/documentation/viiva.gif" WIDTH="400" HEIGHT=
+  "2" ALIGN="BOTTOM" NATURALSIZEFLAG="3"></CENTER></P>
+  <P><A NAME="objective"></A><B>OBJECTIVETEXT { &lt;the text&gt; }</B></P>
+  <BLOCKQUOTE>
+    <P>Scenario objective.</P>
+    <P><TABLE WIDTH="450" BORDER="0" CELLSPACING="0" CELLPADDING="5" HEIGHT=
+    "24">
+<TR>
+<TD WIDTH="18%" HEIGHT="17" BGCOLOR="#013f03">    <P><CENTER>Example</CENTER></TD>
+<TD WIDTH="82%" BGCOLOR="#002601">    OBJECTIVETEXT {Kill the enemy.}</TD></TR>
+</TABLE>
+</P>
+  </BLOCKQUOTE>
+  <P><CENTER><IMG SRC="Pics/documentation/viiva.gif" WIDTH="400" HEIGHT=
+  "2" ALIGN="BOTTOM" NATURALSIZEFLAG="3"></CENTER></P>
+  <P><A NAME="tip"></A><B>TIPTEXT { &lt;the text &gt; }</B></P>
+  <BLOCKQUOTE>
+    <P>Scenario tips.</P>
+    <P><TABLE WIDTH="450" BORDER="0" CELLSPACING="0" CELLPADDING="5" HEIGHT=
+    "24">
+<TR>
+<TD WIDTH="18%" HEIGHT="17" BGCOLOR="#013f03">    <P><CENTER>Example</CENTER></TD>
+<TD WIDTH="82%" BGCOLOR="#002601">    TIPTEXT {Don't forget to defend yourself.}</TD></TR>
+</TABLE>
+</P>
+  </BLOCKQUOTE>
+  <P><CENTER><IMG SRC="Pics/documentation/viiva.gif" WIDTH="400" HEIGHT=
+  "2" ALIGN="BOTTOM" NATURALSIZEFLAG="3"></CENTER></P>
+  <P><A NAME="units"></A><B>List of units</B></P>
+  <BLOCKQUOTE>
+    <P>0 = Thug<BR>
+    1 = Pistol man<BR>
+    2 = Thompson man<BR>
+    3 = Terrorist<BR>
+    4 = Sniper<BR>
+    5 = Cadillac<BR>
+    7 = Collector<BR>
+    8 = Shotgun man<BR>
+    9 = Hit man<BR>
+    11 = Thief<BR>
+    12 = Godfather</P>
+  </BLOCKQUOTE>
+</BLOCKQUOTE>
+
+<P><CENTER><IMG SRC="Pics/documentation/viiva.gif" WIDTH="400" HEIGHT="2"
+ALIGN="BOTTOM" NATURALSIZEFLAG="3"></CENTER></P>
+
+<BLOCKQUOTE>
+  <P><A NAME="businesses"></A><B>List of businesses</B></P>
+  <BLOCKQUOTE>
+    <P>0 = extortion<BR>
+    1 = bootlegging<BR>
+    2 = entertainment<BR>
+    3 = gambling<BR>
+    4 = troubleshooting<BR>
+    5 = support<BR>
+    6 = any</BLOCKQUOTE>
+</BLOCKQUOTE>
+</BODY>
+</HTML>
